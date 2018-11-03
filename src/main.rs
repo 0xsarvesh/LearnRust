@@ -17,6 +17,11 @@ fn main() {
     println!("Hello world");
     let returned_data = fibonacci(5);
     println!("{}", returned_data);
+
+    println!("32 F is {} c ", fahrenheit_to_celsius(32.0));
+
+    println!("0  C is {} F ", celsius_to_fahrenheit(0.0));
+
 }
 
 
@@ -36,4 +41,17 @@ fn fibonacci(_num: i32) -> i32
         }
         second
     }
+}
+
+
+fn fahrenheit_to_celsius(_temp: f32) -> f32
+{
+
+    (_temp - 32.0) * 5.0/9.0
+}
+
+fn celsius_to_fahrenheit(_temp: f32) -> f32
+{
+
+    (_temp) * 9.0/5.0 + 32.0
 }
