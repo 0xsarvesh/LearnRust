@@ -14,6 +14,26 @@
 
 
 fn main() {
-
     println!("Hello world");
+    let returned_data = fibonacci(5);
+    println!("{}", returned_data);
+}
+
+
+fn fibonacci(_num: i32) -> i32
+{
+    if _num == 1 {
+        0
+    } else {
+        let mut first = 0;
+        let mut second = 1;
+        let mut temp : i32;
+
+        for _i in 0.._num {
+            temp = second;
+            second = first + second;
+            first  = temp;
+        }
+        second
+    }
 }
